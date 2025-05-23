@@ -1,29 +1,28 @@
-function signInTestUser({credentials}){
-	let user = null;
+const authModel = require("@models/auth");
 
-	if(credentials.password === "tom"){
-		user = {
-			name: "tom",
-			token: "1",
-		};
-	}
-	else if(credentials.password === "dacristina"){
-		user = {
-			name: "dacristina",
-			token: "2",
-		}
-	}
-	else if(credentials.password === "pavel"){
-		user = {
-			name: "pavel",
-			token: "3",
-		}
-	}
-	else {
-		return false;
-	}
 
-	return user;
+async function signInTestUser({credentials}){
+	try{
+		const query = {
+			"$or": [
+				{
+					name: credentials.nameOrEmail,
+					password: credentials.password,
+				},
+				{
+					email: credentials.nameOrEmail,
+					password: credentials.password,
+				},
+			],
+		}
+
+		const result = await authModel.signIn({query});
+
+		return result;
+	}
+	catch(error){
+		throw error;
+	}
 }
 
 

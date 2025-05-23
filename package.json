@@ -14,13 +14,15 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
-    "module-alias": "^2.2.3"
+    "module-alias": "^2.2.3",
+    "mongodb": "^6.16.0"
   },
-	"_moduleAliases": {
-		"@router": "src/router",
-		"@controller": "src/controller",
-		"@services": "src/services",
-		"@models": "src/models",
-		"@utils": "src/utils"
-	}
+  "_moduleAliases": {
+    "@config": "src/config",
+    "@router": "src/router",
+    "@controller": "src/controller",
+    "@services": "src/services",
+    "@models": "src/models",
+    "@utils": "src/utils"
+  }
 }

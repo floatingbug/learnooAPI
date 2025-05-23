@@ -5,6 +5,10 @@ const app = express();
 const httpServer = require("http").createServer(app);
 const apiRouter = require("@router");
 const cors = require("cors");
+const {connectToDB} = require("@config/db");
+
+
+connectToDB();
 
 
 const PORT = process.env.PORT || 3000;
