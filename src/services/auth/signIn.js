@@ -26,7 +26,7 @@ async function signIn({credentials}){
 			code: 200,
 			message: "Sign in success.",
 			data: {
-				name: result.name,
+				...user,
 				token,
 			},
 		};
