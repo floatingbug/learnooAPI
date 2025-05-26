@@ -18,7 +18,6 @@ async function signInTestUser({credentials}){
 
 		const result = await authModel.signIn({query});
 
-
 		return result;
 	}
 	catch(error){

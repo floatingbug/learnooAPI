@@ -19,6 +19,7 @@
   },
   "_moduleAliases": {
     "@config": "src/config",
+    "@middleware": "src/middleware",
     "@router": "src/router",
     "@controller": "src/controller",
     "@services": "src/services",

@@ -1,8 +1,8 @@
-const getUser = require("./getUser");
 const changeMasterData = require("./changeMasterData");
+const getUser = require("./getUser");
 
 
 module.exports = {
-	getUser,
 	changeMasterData,
-}
+	getUser,
+};
