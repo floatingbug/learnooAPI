@@ -18,6 +18,7 @@ app.use(cors({
 	origin: "*",
 }));
 
+app.use(express.static("./src/public"));
 app.use("/api", apiRouter);
 
 
