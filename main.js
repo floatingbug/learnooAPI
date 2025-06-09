@@ -6,6 +6,7 @@ const httpServer = require("http").createServer(app);
 const apiRouter = require("@router");
 const cors = require("cors");
 const {connectToDB} = require("@config/db");
+const path = require("path");
 
 
 connectToDB();
@@ -18,7 +19,8 @@ app.use(cors({
 	origin: "*",
 }));
 
-app.use("/resource", express.static("./src/public"));
+
+app.use("/resource", express.static(path.join(__dirname, "src/public")));
 app.use("/api", apiRouter);
 
 
